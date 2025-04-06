@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Expression Question</title>
+    <link rel="stylesheet" href="q3styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="question-box">
+            <div class="question-number">3</div>
+            <h2>Please Identify the <br>supposed Facial Expression <br>in the shown image.</h2>
+            <div class="button-grid">
+                <a href="q4.html" class="quiz-button">ANGRY</a>
+                <a href="q4.html" class="quiz-button">SAD</a>
+                <a href="q4.html" class="quiz-button">ECSTATIC</a>
+                <a href="q4.html" class="quiz-button">CONFUSED</a>
+            </div>
+        </div>
+        <div class="image-box" id="toggleBox">
+            <img id="expressionImage" src="angry.jpg" alt="Expression" style="display: none;">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("toggleBox").addEventListener("click", function() {
+            var img = document.getElementById("expressionImage");
+            if (img.style.display === "none") {
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

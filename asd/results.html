@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neurodivergent Match Results</title>
+  <link rel="stylesheet" href="resultstyles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Your Neurodivergent Quiz Results</h1>
+    <p>Based on your answers, you show a <strong>39%</strong> alignment with traits commonly associated with ASD. This doesn’t mean you are Autistic, but you may relate to some aspects. If you're curious or concerned, speaking with a specialist can provide more clarity.</p>
+
+    <ul class="traits">
+      <li>Difficulty with understanting social cues and maintaining conversations</li>
+      <li>Engaging in repeated actions or routines.</li>
+      <li>Having intense focus on specific topics or activities.</li>
+      <li>Over or Underreacting to sensory input like sound, light, textures or smell.</li>
+      <li>Struggling with adapting to changes in routine or environment.</li>
+    </ul>
+
+    <div class="buttons">
+      <a href="sim.html" class="btn">SIMULATION</a>
+      <a href="../community.html" class="btn">COMMUNITY</a>
+      <a href="#" class="btn">THERAPIST & EXPERT</a>
+      <a href="../quizchoice.html" class="btn">ANOTHER QUIZ</a>
+    </div>
+
+    <div class="feedback-section">
+      <h2>Feedback On the Quiz</h2>
+      
+      <div class="rating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+
+      <label for="feedback">Any Recommendations:</label>
+      <textarea id="feedback" placeholder="Type your feedback here..."></textarea>
+    </div>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    stars.forEach((star, index) => {
+      star.addEventListener("click", () => {
+        stars.forEach((s, i) => {
+          s.classList.toggle("active", i <= index);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

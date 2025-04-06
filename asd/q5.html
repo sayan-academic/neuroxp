@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Discomfort Question</title>
+    <link rel="stylesheet" href="q5styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-box" id="audioBox">
+            <audio id="audioPlayer">
+                <source src="sound.mp3" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+            <div class="play-btn">▶</div>
+        </div>
+        <div class="content">
+            <div class="question-number">5</div>
+            <h2>Did the played Audio cause You discomfort?</h2>
+            <div class="button-grid">
+                <a href="q6.html">
+                <button class="quiz-button">YES IT DID</button>
+                <button class="quiz-button">NOT ACTUALLY</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("audioBox").addEventListener("click", function() {
+            var audio = document.getElementById("audioPlayer");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
+    
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="../store-responses.js"></script>
+    
+</body>
+</html>

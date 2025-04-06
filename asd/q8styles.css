@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
+
+body {
+    background-color: #F8E4A1;
+    color: #031400;
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.question-number {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid #031400;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.quiz-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: transparent;
+    border: 2px solid #031400;
+    color: #031400;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.quiz-button:hover {
+    background-color: #031400;
+    color: #F8E4A1;
+    transform: scale(1.05);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Spectrum Disorder Quiz</title>
+    <link rel="stylesheet" href="q1styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-section">
+            <div class="video-container" id="videoContainer">
+                <video id="videoPlayer" poster="placeholder.jpg">
+                    <source src="colourlight.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="play-button" id="playButton">▶️</div>
+            </div>
+        </div>
+        <div class="quiz-section">
+            <div class="question-number">1</div>
+            <h2>Did the shown video cause you discomfort?</h2>
+            <div class="buttons">
+                <a href="q2.html">
+                <button class="quiz-button">YES IT DID</button>
+                <button class="quiz-button">NOT ACTUALLY</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById("videoPlayer");
+        const playButton = document.getElementById("playButton");
+        const videoContainer = document.getElementById("videoContainer");
+
+        videoContainer.addEventListener("click", () => {
+            if (video.paused) {
+                video.play();
+                playButton.style.opacity = "0"; // Hide play button when playing
+            } else {
+                video.pause();
+                playButton.style.opacity = "1"; // Show play button when paused
+            }
+        });
+
+        video.addEventListener("play", () => {
+            playButton.style.opacity = "0"; // Hide play button
+        });
+
+        video.addEventListener("pause", () => {
+            playButton.style.opacity = "1"; // Show play button
+        });
+    </script>
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="../store-responses.js"></script>
+    
+</body>
+</html>
