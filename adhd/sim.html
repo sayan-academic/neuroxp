@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADHD Simulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            overflow-y: scroll;
+        }
+        
+        .content {
+            padding: 40px;
+            font-size: 1.4em;
+            line-height: 1.8;
+            background-color: #ffffff;
+            color: #333;
+        }
+        
+        .flashing {
+            animation: flashColor 0.4s infinite alternate;
+        }
+        
+        @keyframes flashColor {
+            0% {
+                color: black;
+            }
+            100% {
+                color: blue;
+            }
+        }
+        
+        .distracting-text {
+            position: fixed;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: red;
+            animation: floatAround 3s linear infinite;
+            pointer-events: none;
+            z-index: 999;
+        }
+        
+        @keyframes floatAround {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(80vw, 10vh);
+            }
+            50% {
+                transform: translate(50vw, 50vh);
+            }
+            75% {
+                transform: translate(10vw, 80vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content" id="adhdText">
+        <p>Trying to focus on reading this text, but something keeps distracting you...</p>
+        <!-- Repeat paragraph content to simulate a long article -->
+        <script>
+            const para = "Sometimes it's hard to keep your attention on just one thing. As you read, your brain might wander to something else entirely. ADHD can make even simple tasks feel overwhelming or hard to start. The noise in your head might be louder than what's in front of you.";
+            const container = document.getElementById('adhdText');
+            for (let i = 0; i < 60; i++) {
+                const p = document.createElement('p');
+                p.textContent = para;
+                container.appendChild(p);
+            }
+        </script>        
+    </div>
+
+    <script>
+        // Flashing effect
+        function flashText() {
+            const text = document.getElementById('adhdText');
+            text.classList.add('flashing');
+            setTimeout(() => text.classList.remove('flashing'), 2000);
+        }
+
+        // Add moving distractions
+        function addDistractions() {
+            const distraction = document.createElement('div');
+            distraction.className = 'distracting-text';
+            distraction.style.top = Math.random() * window.innerHeight + 'px';
+            distraction.style.left = Math.random() * window.innerWidth + 'px';
+            distraction.innerText = ['Click me!', 'What was that?', 'Wait!', 'Alert!', 'Remember this?'][Math.floor(Math.random() * 5)];
+            document.body.appendChild(distraction);
+
+            setTimeout(() => {
+                distraction.remove();
+            }, 5000);
+        }
+
+        setInterval(flashText, 7000);
+        setInterval(addDistractions, 4000);
+    </script>
+</body>
+
+</html>

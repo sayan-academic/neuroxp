@@ -1,0 +1,140 @@
+/* Reset and Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #4A627A; /* Matching background */
+    color: #F5F0E4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Question Number */
+.question-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    border: 2px solid #F5F0E4;
+    border-radius: 12px; /* Rounded rectangle */
+    color: #F5F0E4;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Layout: Text and Video Section */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Text Section */
+.text-section {
+    flex: 1;
+    text-align: left;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 30px; /* Spacing between options */
+}
+
+/* Option Button Styling */
+.option {
+    width: 45%;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #F5F0E4;
+    background: transparent;
+    border: 2px solid #F5F0E4;
+    border-radius: 30px; /* Rounded edges */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal;
+}
+
+/* Hover Effect */
+.option:hover {
+    background-color: #F5F0E4;
+    color: #4A627A;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Video Section */
+.video-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Video Box */
+.video {
+    width: 500px;          /* Fixed width */
+    height: 500px;         /* Fixed height */
+    object-fit: cover;
+    border-radius: 15px;
+    background: #F5F0E4;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .options-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        width: 80%;
+        padding: 12px 18px;
+        font-size: 13px;
+        border-radius: 28px;
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+    }
+}

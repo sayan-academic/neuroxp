@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #45627b; /* Matching background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    text-align: center;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px; /* Limit max width */
+}
+
+/* Question Number Styling */
+.question-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f5f0e4;
+    border-radius: 50%;
+    color: #f5f0e4;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Main Question */
+h1 {
+    font-size: 32px;
+    color: #f5f0e4; /* Cream color for heading */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Options Container */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+/* Option Button Styling */
+.option {
+    width: 48%; /* Two buttons per row */
+    padding: 16px 20px;
+    font-size: 16px;
+    color: #f5f0e4;
+    background: transparent;
+    border: 2px solid #f5f0e4;
+    border-radius: 40px; /* Oval shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    line-height: 1.4;
+    white-space: normal; /* Allow multi-line text */
+    text-align: center;
+}
+
+/* Ensure buttons are properly aligned in two columns */
+.option:nth-child(odd) {
+    margin-right: auto;
+}
+.option:nth-child(even) {
+    margin-left: auto;
+}
+
+/* Hover Animation */
+.option:hover {
+    background-color: #f5f0e4;
+    color: #45627b;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        width: 80%; /* Make buttons wider on smaller screens */
+        padding: 14px 20px;
+        font-size: 14px;
+        border-radius: 35px;
+    }
+}

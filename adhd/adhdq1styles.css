@@ -1,0 +1,104 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #476078; /* Matches the image */
+    color: #FAF4E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    max-width: 900px;
+    padding: 40px;
+    margin: auto;
+}
+
+/* Question Number */
+.question-number {
+    font-size: 20px;
+    color: #FAF4E5;
+    background-color: transparent;
+    border: 2px solid #FAF4E5;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Question Text */
+.question-text {
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Options Container */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Option Link (to make buttons clickable) */
+.option-link {
+    text-decoration: none;
+}
+
+/* Option Button */
+.option-btn {
+    background: transparent;
+    border: 2px solid #FAF4E5;
+    color: #FAF4E5;
+    font-size: 16px;
+    padding: 20px 25px;
+    border-radius: 25px;
+    width: 420px;
+    height: 80px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Button Hover Effect */
+.option-btn:hover {
+    background: rgba(250, 244, 229, 0.1);
+    color: #FAF4E5;
+    transform: scale(1.03);
+}
+
+/* Ensuring All Pages Have the Same Layout */
+.container, .options-container, .question-text {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .options-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .option-btn {
+        width: 100%;
+        height: auto;
+    }
+}

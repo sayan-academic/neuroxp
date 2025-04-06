@@ -1,0 +1,61 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #45627b;    /* Matching background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia', serif; /* Elegant serif font */
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 80px;
+    color: #f5f0e4;               /* Cream color for heading */
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 20px;
+    color: #f5f0e4;
+    background: transparent;
+    border: 2px solid #f5f0e4;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover Animation */
+.btn:hover {
+    background-color: #f5f0e4;
+    color: #45627b;
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 12px 30px;
+    }
+}
