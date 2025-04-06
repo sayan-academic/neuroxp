@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroXP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure each section takes up the full browser window */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .main-content, .neurodiversity-section {
+            min-height: 100vh; /* Full browser window height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Social icons only on the first page */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .neurodiversity-section .footer {
+            display: none; /* Hide footer on the second section */
+        }
+        .social-icons img {
+            width: 40px;   /* Placeholder size */
+            height: 40px;  /* Placeholder size */
+            margin: 0 10px;
+            object-fit: contain;  /* Ensures the image scales properly */
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span>NEUROXP</span>
+            <img src="./logo.png" alt="NeuroXP Logo" class="logo-img"> 
+        </div>
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">LOGIN</a>
+            <a href="#">COMMUNITY</a>
+            <a href="#">GAMES</a>
+            <a href="#">PROFILE</a>
+            <img src="./search.png" alt="Search Icon" class="search-icon">
+        </nav>
+    </header>
+    
+
+<main class="main-content">
+    <h3>Step into awareness and self-acceptance.</h3>
+    <h1>Dive into connection,<br>understanding and growth.</h1>
+    
+    <a href="quizchoice.html">
+    <button class="quiz-btn">Take the Quiz</button>
+    </a>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <img src="./facebook.png" alt="Social Icon 1">
+            <img src="./twitter.png" alt="Social Icon 2">
+            <img src="./instagram.png" alt="Social Icon 3">
+        </div>
+    </footer>
+</main>
+
+
+<section class="neurodiversity-section">
+    <blockquote class="quote">
+        “Neurodiversity may be every bit as crucial for the human race as biodiversity is for life in general.”
+        <footer>- Judy Singer (Sociologist, Coined the Term "Neurodiversity")</footer>
+    </blockquote>
+
+    <p class="description">
+        Neurodiversity refers to the full spectrum of human neurological differences. Just as biodiversity includes all forms of life, neurodiversity includes all kinds of minds. 
+        It is about recognizing that everyone's brain works differently, whether they are neurotypical or neurodivergent. 
+        Neurodiversity shifts the perspective to valuing cognitive differences as part of the natural diversity of human minds. 
+        This perspective promotes inclusion, acceptance, and support for all individuals, ensuring that workplaces, schools, and society adapt to accommodate different ways of thinking.
+    </p>
+
+    <div class="learn-more-btn">
+        <a href="#">LEARN MORE ABOUT NEURODIVERSITY</a>
+    </div>
+
+    <div class="objectives">
+        <span>OBJECTIVES OF NEUROXP</span>
+    </div>    
+
+    <section id="cognitive-insight-section" class="cognitive-insight-section">
+        <div class="content">
+            <ul>
+                <li><strong>“Cognitive Insight Test”</strong></li>
+                <p>We provide a comprehensive quiz to help individuals identify neurodivergent traits early and it promotes understanding, fosters empathy, and encourages inclusivity by bridging the gap between neurodivergent and neurotypical experiences.</p>
+                
+                <li><strong>Community Building & Support</strong></li>
+                <p>Connects neurodivergent and neurotypical individuals in a shared, supportive space fostering a judgment-free environment for meaningful discussions and connections.</p>
+                
+                <li><strong>Gamified Improvement System</strong></li>
+                <p>Engaging games and tasks promote personal growth and development for neurodivergent individuals and encourage participation through positive reinforcement and motivation.</p>
+            </ul>
+    
+            <p class="platform-description">
+                Our platform seamlessly integrates diagnosis, support groups, and educational awareness into a unified, interactive ecosystem. By bridging these key aspects, we create a holistic space that supports individuals at every stage of their journey. Our goal is to foster a supportive and inclusive environment where neurodivergent individuals can thrive with the right information, community, and assistance all in one place.
+            </p>
+    
+        </div>
+    </section>    
+</section>
+<section id="sign-in-section" class="sign-in-section">
+    <h2>SIGN IN TO NEUROXP</h2>
+    
+    <form class="sign-in-form">
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+        <button type="submit" class="next-btn">NEXT</button>
+    </form>
+
+    <footer class="sign-in-footer">
+        <div class="footer-links">
+            <div class="footer-section">
+                <h3>FEEDBACK</h3>
+                <a href="#">Communication & Support</a>
+                <a href="#">Suggestions & Feature Requests</a>
+            </div>
+            <div class="footer-section">
+                <h3>RESOURCES</h3>
+                <a href="#">Communities</a>
+                <a href="#">Self-Care Advices</a>
+            </div>
+            <div class="footer-section">
+                <h3>INFORMATION</h3>
+                <a href="#">About Us</a>
+                <a href="#">Terms & Policies</a>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <a href="#">Facebook</a>
+                <a href="#">E-mail</a>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon">
+                <img src="./instagram2.png" alt="Facebook" class="icon-placeholder">
+            </a>
+            <a href="#" class="social-icon">
+                <img src="./email.png" alt="Email" class="icon-placeholder">
+            </a>
+            <a href="#" class="social-icon">
+                <img src="./phone.png" alt="Phone" class="icon-placeholder">
+            </a>
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>

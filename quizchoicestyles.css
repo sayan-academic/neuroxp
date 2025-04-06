@@ -1,0 +1,96 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    color: #4a4a39;
+}
+
+body {
+    background-color: #faf5eb;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #4a4a39;
+}
+
+header h1 span {
+    color: #717143;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-flex;             /* Ensures consistent alignment */
+    justify-content: center;          /* Center content horizontally */
+    align-items: center;              /* Center content vertically */
+    width: 500px;                     /* Fixed width for all buttons */
+    height: 70px;                     /* Fixed height for uniform size */
+    font-size: 1.2rem;
+    border: 2px solid #717143;
+    border-radius: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Button Colors */
+.adhd {
+    background-color: #f5f3e7;
+}
+
+.dyslexia {
+    background-color: #b3b36a;
+    color: #fff;
+}
+
+.asd {
+    background-color: #c4b28d;
+    color: #fff;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #717143;
+}
+
+.footer-content img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    vertical-align: middle;
+}

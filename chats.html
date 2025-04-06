@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Chat</title>
+    <link rel="stylesheet" href="chatstyles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <span>COMMUNITY CHATS</span>
+            <span class="members">99 MEMBERS ACTIVE</span>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <!-- Messages will be displayed here -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="message-input" placeholder="Type a message">
+            <button id="send-button">
+                <img src="./send.png" alt="Send">
+            </button>
+        </div>
+    </div>
+
+    <script>
+ document.getElementById("send-button").addEventListener("click", function() {
+    let messageInput = document.getElementById("message-input");
+    let messageText = messageInput.value.trim();
+
+    if (messageText !== "") {
+        let chatBody = document.getElementById("chat-body");
+
+        // Create a container for the message
+        let messageContainer = document.createElement("div");
+        messageContainer.classList.add("message-container");
+
+        // Create the message bubble
+        let messageElement = document.createElement("div");
+        messageElement.classList.add("message", "sent");
+        messageElement.textContent = messageText;
+
+        // Append message to its container
+        messageContainer.appendChild(messageElement);
+
+        // Append container to chat body
+        chatBody.appendChild(messageContainer);
+
+        // Clear input field
+        messageInput.value = "";
+
+        // Scroll to the bottom
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+});
+
+    </script>
+</body>
+</html>
