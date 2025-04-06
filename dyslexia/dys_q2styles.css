@@ -1,0 +1,81 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    background-color: #b8b45b; /* Matching background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Quiz Section */
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    max-width: 700px;
+}
+
+/* Question Number */
+.question-number {
+    display: inline-block;
+    font-size: 22px;
+    padding: 12px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Options Layout */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Reduced gap for balanced spacing */
+    width: 100%;
+    max-width: 650px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 15px;               /* Smaller button size */
+    font-size: 16px;              /* Reduced font size */
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background-color: #ffffff;
+    color: #b8b45b;
+    transform: scale(1.05);      /* Subtle hover effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

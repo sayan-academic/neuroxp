@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Quiz</title>
+    <link rel="stylesheet" href="dys_q7styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Video Box -->
+        <div class="video-container">
+            <video id="video" class="video-placeholder" src="amusing.mp4"></video>
+            <button id="playPauseBtn" class="play-button">▶</button>
+        </div>
+
+        <!-- Question Section -->
+        <div class="question-box">
+            <div class="question-number">7</div>
+            <h1 class="question-text">
+                How would you define the scene shown in the played clip?
+            </h1>
+            <div class="options">
+                <button class="btn" onclick="redirectToNext()">AMUSING</button>
+                <button class="btn" onclick="redirectToNext()">SAD</button>
+                <button class="btn" onclick="redirectToNext()">VIOLENT</button>
+                <button class="btn" onclick="redirectToNext()">FRIGHTENING</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById("video");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+
+        playPauseBtn.addEventListener("click", () => {
+            if (video.paused || video.ended) {
+                video.play();
+                playPauseBtn.textContent = "⏸"; // Pause icon
+            } else {
+                video.pause();
+                playPauseBtn.textContent = "▶"; // Play icon
+            }
+        });
+
+        // Reset play button when video ends
+        video.addEventListener("ended", () => {
+            playPauseBtn.textContent = "▶"; // Reset to play icon
+        });
+
+        function redirectToNext() {
+            window.location.href = "dys_q8.html";
+        }
+    </script>
+
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="../store-responses.js"></script>
+    
+</body>
+</html>

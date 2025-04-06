@@ -1,0 +1,48 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #b8b45b; /* Matching background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff; 
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/* Start Button */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #ffffff;
+    color: #b8b45b;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

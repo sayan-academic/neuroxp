@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dyslexia Simulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            font-size: 1.3em;
+            line-height: 1.6;
+            animation: distort 0.3s infinite alternate;
+        }
+        
+        .content {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        p {
+            margin: 0;
+            padding: 0 10px;
+        }
+        
+        @keyframes distort {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(2px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content" id="mainContent">
+        <!-- Repeated content to fill the page -->
+        "Dyslexia can make words shift, letters scramble, or appear distorted.", "This is an example of how reading might feel with dyslexia.", "Letters in longer words get jumbled, making it harder to recognize them instantly.", "People with dyslexia often develop
+        alternative strategies for reading and comprehension.", "Dyslexia affects each person differently, but challenges with decoding words is a common experience.", "Reading becomes tiring, and re-reading the same sentence might be necessary.", "Visual
+        stress can add to the difficulty of interpreting letters and words.", "Distractions like background noise can make focusing on text even harder.", "Colored overlays and specialized fonts are tools some people find helpful.", "Every individual's
+        experience with dyslexia is unique and valid.", "Support and understanding from others can make a huge difference.", "Dyslexia doesn't mean a lack of intelligence—it means a different way of processing information.", "Creative thinking and problem-solving
+        are often strengths of dyslexic individuals.", "Letters may flip, swap, or feel like they are dancing across the page.", "Using audiobooks or speech-to-text can help reduce the cognitive load of reading.", "Time accommodations in tests can level
+        the playing field for dyslexic learners.", "Breaking up reading tasks and taking frequent breaks can help with focus.", "Many successful people have dyslexia and use it as a source of creativity and innovation.", "Reading aloud can sometimes help
+        with comprehension and fluency.", "The brain of someone with dyslexia processes language differently—but not incorrectly.", "It's important to celebrate different learning styles and support neurodiversity.", "Early diagnosis and intervention
+        can make a big difference in a person's educational journey.", "Dyslexia can affect spelling, writing, and organization skills in addition to reading.", "Encouragement and positive reinforcement are key in helping dyslexic readers thrive.", "Visual
+        aids, diagrams, and hands-on learning can enhance understanding.", "Everyone deserves access to education that fits their unique needs.", "Accessibility benefits everyone—not just those with dyslexia.", "Patience and empathy go a long way in making
+        learning inclusive.", "With the right tools and support, dyslexic individuals can excel in any field." ]
+        <!-- Add more if needed -->
+    </div>
+
+    <script>
+        function scrambleWord(word) {
+            if (word.length <= 3) return word;
+            const first = word[0];
+            const last = word[word.length - 1];
+            const middle = word.slice(1, -1)
+                .split('')
+                .sort(() => Math.random() - 0.5)
+                .join('');
+            return first + middle + last;
+        }
+
+        function scrambleTextContent(node) {
+            if (node.nodeType === 3 && node.textContent.trim().length > 0) {
+                node.textContent = node.textContent
+                    .split(' ')
+                    .map(scrambleWord)
+                    .join(' ');
+            } else if (node.nodeType === 1) {
+                for (let i = 0; i < node.childNodes.length; i++) {
+                    scrambleTextContent(node.childNodes[i]);
+                }
+            }
+        }
+
+        function distortAllText() {
+            scrambleTextContent(document.body);
+        }
+
+        setInterval(distortAllText, 3000);
+    </script>
+</body>
+
+</html>

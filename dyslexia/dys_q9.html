@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning Quiz</title>
+    <link rel="stylesheet" href="dys_q9styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Question Section -->
+        <div class="question-box">
+            <div class="question-number">9</div>
+            <h1 class="question-text">
+                How do you feel about learning a new language?
+            </h1>
+            <div class="options">
+                <button class="btn" onclick="redirectToNext()">EASY/INTERESTING</button>
+                <button class="btn" onclick="redirectToNext()">TAKES EFFORT BUT DO FINE</button>
+                <button class="btn" onclick="redirectToNext()">NOT INTERESTED/BORED</button>
+                <button class="btn" onclick="redirectToNext()">UNCOMFORTABLE/EXTREMELY DIFFICULT</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToNext() {
+            window.location.href = "dys_q10.html";
+        }
+    </script>
+
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="../store-responses.js"></script>
+    
+</body>
+</html>

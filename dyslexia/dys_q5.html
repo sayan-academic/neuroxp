@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dys_q5styles.css">
+    <title>Cross-word Quiz</title>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Image Placeholder Section -->
+    <div class="image-box">
+        <img src="crossword.jpg" alt="Crossword">
+        <!-- Replace the above <p> tag with <img src="your-image.jpg" alt="Crossword"> -->
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz">
+        <div class="question-number">5</div>
+
+        <h2>Solve the shown <br> 
+            <b>Cross-word</b> and choose <br>
+            the two words.
+        </h2>
+
+        <div class="options">
+            <button class="btn" onclick="redirectToNext()">ELEPHANT, UNUSUAL</button>
+            <button class="btn" onclick="redirectToNext()">ADHD, DYSLEXIA</button>
+            <button class="btn" onclick="redirectToNext()">NEURODIVERSITY</button>
+            <button class="btn" onclick="redirectToNext()">NEUROTYPICAL</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function redirectToNext() {
+        window.location.href = "dys_q6.html";
+    }
+</script>
+
+<script type="module" src="../firebase-config.js"></script>
+<script type="module" src="../store-responses.js"></script>
+
+</body>
+</html>

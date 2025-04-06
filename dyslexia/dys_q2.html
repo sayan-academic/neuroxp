@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurodivergent Quiz</title>
+    <link rel="stylesheet" href="dys_q2styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="quiz">
+        <div class="question-number">2</div>
+        <h2>How well do you remember new <br>words or names?</h2>
+        <div class="options">
+            <button class="btn" onclick="redirectToNext()">INSTANTLY</button>
+            <button class="btn" onclick="redirectToNext()">REMEMBER AFTER <br>HEARING A FEW TIMES</button>
+            <button class="btn" onclick="redirectToNext()">OFTEN FORGET, <br>MIX THEM UP</button>
+            <button class="btn" onclick="redirectToNext()">STRUGGLE A LOT.</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function redirectToNext() {
+        window.location.href = "dys_q3.html";
+    }
+</script>
+
+<script type="module" src="../firebase-config.js"></script>
+<script type="module" src="../store-responses.js"></script>
+
+</body>
+</html>

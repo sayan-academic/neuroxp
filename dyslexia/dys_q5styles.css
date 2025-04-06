@@ -1,0 +1,124 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #b8b45b;  /* Matching background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;  /* Center align the content */
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    gap: 50px;                /* Space between image and text */
+}
+
+/* Image Placeholder Box */
+.image-box {
+    width: 420px;
+    height: 420px;
+    background-color: #f8f3eb;   /* Light beige color */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;                /* Placeholder text color */
+    font-size: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+/* Quiz Section */
+.quiz {
+    text-align: center;
+    color: #ffffff;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* Center the text */
+    align-items: center;
+}
+
+/* Question Number Styling */
+.question-number {
+    font-size: 20px;         /* Slightly larger */
+    padding: 12px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* Question Text */
+h2 {
+    font-size: 28px;         /* Slightly larger for better visibility */
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* Options Section */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;                /* Increased spacing between buttons */
+}
+
+/* Button Styling */
+.btn {
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Button Hover Animation */
+.btn:hover {
+    background-color: #ffffff;
+    color: #b8b45b;
+    transform: scale(1.08);     /* Slightly larger on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;               /* Smaller gap */
+    }
+
+    .image-box {
+        width: 90%;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .quiz {
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+}

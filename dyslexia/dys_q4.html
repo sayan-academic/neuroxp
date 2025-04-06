@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dys_q4styles.css">
+    <title>Word Confusion Quiz</title>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Quiz Section -->
+    <div class="quiz">
+        <div class="question-number">4</div>
+
+        <h2>How often do you find yourself confusing <br> 
+            between similar-looking words? <i>(e.g., form/from)</i>
+        </h2>
+
+        <div class="options">
+            <button class="btn" onclick="redirectToNext()">ALMOST NEVER</button>
+            <button class="btn" onclick="redirectToNext()">OCCASIONALLY, <br> BUT CATCH EASILY</button>
+            <button class="btn" onclick="redirectToNext()">NOT SO FREQUENTLY, <br> BUT HAPPENS</button>
+            <button class="btn" onclick="redirectToNext()">FREQUENTLY, <br> ALWAYS IN DOUBT</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function redirectToNext() {
+        window.location.href = "dys_q5.html";
+    }
+</script>
+
+<script type="module" src="../firebase-config.js"></script>
+<script type="module" src="../store-responses.js"></script>
+
+</body>
+</html>

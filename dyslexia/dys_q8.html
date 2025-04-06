@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question</title>
+    <link rel="stylesheet" href="dys_q8styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="question-box">
+            <div class="question-number">8</div>
+            <h1 class="question-text">
+                When learning something new involves a lot of written material, how do you manage them?
+            </h1>
+            <div class="options">
+                <button class="btn" onclick="redirectToNext()">UNDERSTAND EASILY</button>
+                <button class="btn" onclick="redirectToNext()">TAKE MY TIME, BUT MANAGE ANYWAYS</button>
+                <button class="btn" onclick="redirectToNext()">DON'T STRUGGLE, BUT GET BORED</button>
+                <button class="btn" onclick="redirectToNext()">STRUGGLE AND AVOID. PREFER AUDIBLE MATERIAL.</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToNext() {
+            window.location.href = "dys_q9.html";
+        }
+    </script>
+
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="../store-responses.js"></script>
+    
+</body>
+</html>

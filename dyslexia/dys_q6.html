@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Experience Quiz</title>
+    <link rel="stylesheet" href="dys_q6styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz">
+            <div class="question-number">6</div>
+            <h2>How do you feel when reading a long passage?</h2>
+            
+            <div class="options">
+                <button class="btn" onclick="redirectToNext()">COMFORTABLE, <br> CAN UNDERSTAND EVERYTHING</button>
+                <button class="btn" onclick="redirectToNext()">NORMAL PACE, <br> BUT RE-READ SOMETIMES</button>
+                <button class="btn" onclick="redirectToNext()">OFTEN STRUGGLE, <br> AND RE-READ FREQUENTLY</button>
+                <button class="btn" onclick="redirectToNext()">EXHAUSTING / AVOID READING</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToNext() {
+            window.location.href = "dys_q7.html";
+        }
+    </script>
+
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="../store-responses.js"></script>
+</body>
+</html>

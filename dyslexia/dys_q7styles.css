@@ -1,0 +1,146 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #b8b45b; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    gap: 50px;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-color: #fcf7ee;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Video Placeholder */
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* Play Button */
+.play-button {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Question Box */
+.question-box {
+    text-align: center;
+    color: #ffffff;
+    max-width: 600px;
+    padding: 40px;
+}
+
+/* Question Number */
+.question-number {
+    font-size: 22px;
+    padding: 10px 22px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Question Text */
+.question-text {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Options Layout */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Button Styling */
+.btn {
+    padding: 15px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    min-width: 200px;
+}
+
+/* Button Hover Animation */
+.btn:hover {
+    background-color: #ffffff;
+    color: #b8b45b;
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .btn {
+        min-width: 100%;
+    }
+
+    .question-text {
+        font-size: 22px;
+    }
+
+    .question-number {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}

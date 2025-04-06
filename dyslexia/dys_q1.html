@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Quiz</title>
+    <link rel="stylesheet" href="dys_q1styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Audio Player -->
+        <div class="audio-box" onclick="toggleAudio()">
+            ▶
+            <audio id="audio" src="unusual_audio.mp3"></audio>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz">
+            <div class="question-number">1</div>
+            <h2>Please select the word<br>which matches closely<br>with the audio.</h2>
+            <div class="options">
+                <button class="btn" onclick="redirectToNext()">UNUSUAL</button>
+                <button class="btn" onclick="redirectToNext()">UNCOMFORTABLE</button>
+                <button class="btn" onclick="redirectToNext()">UNBOTHERED</button>
+                <button class="btn" onclick="redirectToNext()">UNUSED</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Audio Toggle Script
+        const audio = document.getElementById("audio");
+        const audioBox = document.querySelector(".audio-box");
+
+        function toggleAudio() {
+            if (audio.paused || audio.ended) {
+                audio.play();
+                audioBox.innerHTML = "⏸️"; // Pause icon
+            } else {
+                audio.pause();
+                audioBox.innerHTML = "▶"; // Play icon
+            }
+
+            // Reset to play icon when audio ends
+            audio.onended = () => {
+                audioBox.innerHTML = "▶";
+            };
+        }
+
+        // Redirect to the next question
+        function redirectToNext() {
+            window.location.href = "dys_q2.html";
+        }
+    </script>
+
+    <script type="module" src="../firebase-config.js"></script>
+    <script type="module" src="../store-responses.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #b8b45b; /* Matching background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Quiz Section */
+.quiz {
+    text-align: center;
+    color: #ffffff;
+    max-width: 700px;
+}
+
+/* Question Number Styling */
+.question-number {
+    font-size: 18px;
+    padding: 12px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* Question Text */
+h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Options Styling */
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Button Styling */
+.btn {
+    padding: 14px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Button Hover Animation */
+.btn:hover {
+    background-color: #ffffff;
+    color: #b8b45b;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .options {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

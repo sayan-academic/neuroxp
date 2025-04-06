@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dys_q3styles.css">
+    <title>Video Quiz</title>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Quiz Section -->
+    <div class="quiz">
+        <div class="question-number">3</div>
+        <h2>Please select the name of <br> the third person shown in the clip.</h2>
+
+        <div class="options">
+            <button class="btn" onclick="redirectToNext()">EMILY</button>
+            <button class="btn" onclick="redirectToNext()">ROBIN</button>
+            <button class="btn" onclick="redirectToNext()">JESSICA</button>
+            <button class="btn" onclick="redirectToNext()">LAURA</button>
+        </div>
+    </div>
+
+    <!-- Video Player Section -->
+    <div class="video-container" onclick="toggleVideo()">
+        <div class="play-icon" id="playIcon">▶</div>
+        <video id="video" loop>
+            <source src="third_person.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</div>
+
+<script>
+    function redirectToNext() {
+        window.location.href = "dys_q4.html";
+    }
+
+    const video = document.getElementById('video');
+    const playIcon = document.getElementById('playIcon');
+
+    function toggleVideo() {
+        if (video.paused || video.ended) {
+            video.play();
+            playIcon.style.display = "none"; // Hide play icon while playing
+        } else {
+            video.pause();
+            playIcon.style.display = "block"; // Show play icon when paused
+        }
+    }
+
+    video.addEventListener('ended', () => {
+        playIcon.style.display = "block"; // Show play icon when the video ends
+    });
+</script>
+
+<script type="module" src="../firebase-config.js"></script>
+<script type="module" src="../store-responses.js"></script>
+
+</body>
+</html>
